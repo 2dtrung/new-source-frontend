@@ -13,8 +13,10 @@ import {
 import storage from '@/utils/storage';
 
 async function handleUserResponse(data: UserResponse) {
-  const { jwt, user } = data;
-  storage.setToken(jwt);
+  const { user } = data;
+  storage.setToken(
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDVkNDhlYWY0YmFmZTAwMWM2M2Y4YzciLCJwYXNzd29yZCI6IiQyYiQxMCRKZkQuQ0tCd1lJVXFoUnNjdEtDWVZlS211QVBLQ2ExNVZULkF5THRpOE5DS1hMS2xUYmM1MiIsImlhdCI6MTY1MDg3MTg0OH0.iOITYE4NX37tmfvCE373RjGoWZed_HHEQ6gYRh1XfX4'
+  );
   return user;
 }
 

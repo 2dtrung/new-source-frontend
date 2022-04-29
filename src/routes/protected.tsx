@@ -9,6 +9,8 @@ const { DiscussionsRoutes } = lazyImport(
   () => import('@/features/discussions'),
   'DiscussionsRoutes'
 );
+
+const { MeasuresRoutes } = lazyImport(() => import('@/features/measures'), 'MeasuresRoutes');
 const { Dashboard } = lazyImport(() => import('@/features/misc'), 'Dashboard');
 const { Profile } = lazyImport(() => import('@/features/users'), 'Profile');
 const { Users } = lazyImport(() => import('@/features/users'), 'Users');
@@ -35,6 +37,7 @@ export const protectedRoutes = [
     element: <App />,
     children: [
       { path: '/discussions/*', element: <DiscussionsRoutes /> },
+      { path: '/measures/*', element: <MeasuresRoutes /> },
       { path: '/users', element: <Users /> },
       { path: '/profile', element: <Profile /> },
       { path: '/', element: <Dashboard /> },

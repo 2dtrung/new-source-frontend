@@ -31,6 +31,7 @@ const SideNavigation = () => {
       to: './users',
       icon: UsersIcon,
     },
+    { name: 'Measures', to: './measures', icon: FolderIcon },
   ].filter(Boolean) as SideNavigationItem[];
 
   return (
