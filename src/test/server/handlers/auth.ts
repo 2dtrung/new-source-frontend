@@ -48,7 +48,7 @@ export const authHandlers = [
         });
         persistDb('team');
         teamId = team.id;
-        role = 'ADMIN';
+        role = 'USER';
       } else {
         const existingTeam = db.team.findFirst({
           where: {
